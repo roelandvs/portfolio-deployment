@@ -1,0 +1,184 @@
+/* Detail pagina */
+#detail h2 {
+    font-size: 1.8em;
+}
+
+#detail .header-img {
+    width: 100%;
+    height: 50%;
+}
+
+.project-info section {
+    padding: 2em;
+    margin-top: 30px;
+    border: 1px solid #FFF;
+}
+
+#detail header {
+    margin: 50px auto 30px;
+}
+
+#detail .trophy {
+    display: flex;
+    align-items: center;
+    height: auto;
+}
+
+#detail .trophy img {
+    width: 2.5em;
+    margin-right: 1.5em;
+}
+
+#detail .trophy p {
+    font-size: 1.2em;
+    font-weight: 300;
+    max-width: 8em;
+}
+
+#detail main p,
+#about main p {
+    margin-top: 1em;
+}
+
+#info-title::after {
+    content: attr(data-content);
+    color: transparent;
+    -webkit-text-stroke: 0.7px #FFF;
+    margin-left: 10px;
+    opacity: .8;
+}
+
+#detail .project-info ul {
+    margin-top: 20px;
+}
+
+#detail .project-info li {
+    font-size: 1.3em;
+    margin: 5px 0 5px 20px;
+    font-weight: 300;
+    list-style-type: square;
+}
+
+/* Project links */
+.project-links {
+    margin-top: 50px;
+}
+
+.project-links a {
+    display: inline-block;
+    font-size: 2.5em;
+    font-weight: 700;
+    padding: .5em;
+    color: transparent;
+    -webkit-text-stroke: 1.2px #FFF;
+    transition: color .5s;
+    text-align: center;
+}
+
+.project-links a:hover {
+    color: #FFF;
+}
+
+/* Poster page */
+#detail .poster-container {
+    border: 0px;
+    background-color: transparent;
+    padding: 0;
+}
+
+#detail .poster-container h2 {
+    font-size: 2.5em;
+}
+
+#detail .poster-container img {
+    width: 100%;
+}
+
+#detail .poster-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#detail .poster-container li {
+    list-style-type: none;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Tablets */
+@media only screen and (min-width: 728px) {
+    #detail header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 50px auto 30px;
+    }
+
+    #detail h1::after {
+        width: 100%;
+    }
+    
+    .project-info h2 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+
+    .project-info {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .project-info section {
+        padding: 3em;
+    }
+
+    #detail .trophy {
+        margin: 0 auto;
+    }
+
+    #detail .trophy img {
+        width: 3em;
+    }
+    
+    #detail .trophy p {
+        font-size: 1.4em;
+        font-weight: 500;
+    }
+
+    .project-info section:nth-of-type(1) {
+        width: 60%;
+        margin-right: 2em;
+    }
+
+    .project-info section:nth-of-type(2){
+        width: 40%;
+        max-width: 1000px;
+    }
+
+    /* Poster page */
+    #detail .poster-container img {
+        transition: 0.5s all;
+    }
+
+    #detail .poster-container img:hover {
+        transform: scale(1.05);
+    }
+
+    #detail .poster-container li {
+        width: calc(50% - 20px);
+        margin-bottom: 40px;
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    #detail header,
+    #about header {
+        margin-top: 100px;
+    }
+
+    #detail .poster-container h2 {
+        font-size: 3em;
+    }
+}

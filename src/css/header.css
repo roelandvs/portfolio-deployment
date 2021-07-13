@@ -1,0 +1,321 @@
+:root {
+	--bg-color: #151515;
+    --bg-item-color: #C2C2C2;
+	--body-padding: 20px;
+    --margin-mid: 50px;
+    --weight-light: 300;
+
+    /* JS changed properties */
+    --nav-pos: relative;
+    --ul-pos: relative;
+    --ul-transform: none;
+    --icon-display: none;
+}
+
+/* Navigation */
+#main-nav {
+    width: 100vw;
+    border-bottom: 2px solid #FFF;
+    background-color: var(--bg-color);
+    z-index: 1000;
+    top: 0;
+    position: relative;
+}
+
+#main-nav ul {
+    font-size: 1.1em;
+    background-color: var(--bg-color);
+    width: 100%;
+    position: var(--ul-pos);
+    transform: var(--ul-transform);
+}
+
+#main-nav a {
+    border-bottom: 1px solid var(--bg-item-color);
+    padding: 10px 0 10px var(--body-padding);
+    display: block;
+}
+
+#main-nav li:last-of-type a {
+    border-bottom: 2px solid #FFF;
+}
+
+#main-nav > a {
+    background-color: var(--bg-color);
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 15px 0 15px var(--body-padding);
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+#home header {
+    min-height: calc(100vh - 100px);
+    padding-top: var(--margin-mid);
+}
+
+#home header > div:nth-of-type(1) {
+    padding: 0 10px;
+    width: 92%;
+    margin: 0 auto;
+}
+
+#name-intro {
+    padding: 10px 0 20px;
+    font-weight: var(--weight-light);
+    font-size: 1.2em;
+}
+
+#arrow {
+    display: flex;
+    position: relative;
+    margin: calc(100vh / 10) auto 0;
+    width: 30px;
+    animation: float 3s linear -1s infinite;
+    z-index: 1;
+}
+
+#arrow span {
+    height: 1px;
+    width: 1px;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
+
+#portrait-container {
+    width: 85%;
+    margin: 50px auto 0;
+    position: relative;
+    display: flex;
+}
+
+#portrait-container img {
+    width: clamp(15em, 95%, 30em);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Floating */
+.floating {
+    width: 85px;
+    height: 85px;
+    border: 1.5px solid var(--bg-item-color);
+    position: absolute;
+    top: -25px;
+    right: -10px;
+    animation: floatBackground 5s linear -1s infinite;
+}
+
+.floating::before,
+.floating:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 1.5px solid var(--bg-item-color);
+}
+
+.floating::before {
+    top: -20px;
+    left: -20px;
+    animation: floatBackground 4s linear -3s infinite;
+    animation-delay: 1s;
+}
+
+.floating::after {
+    top: 100px;
+    left: 60px;
+    animation: floatBackground 5s linear 1s infinite;
+    animation-delay: -1.3s;
+}
+
+/* Nav Icon Closed*/
+#nav-icon {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 10px;
+    height: 100%;
+    width: 50px;
+    display: var(--icon-display);
+    justify-content: center;
+}
+
+#nav-icon div {
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #FFF;
+    opacity: 1;
+    transition: .3s ease-in-out;
+    transform: rotate(0deg);
+}
+
+#nav-icon div:nth-of-type(1) {
+    top: 28%;
+}
+
+#nav-icon div:nth-of-type(2),
+#nav-icon div:nth-of-type(3) {
+    top: calc(50% - 1.5px);
+}
+
+#nav-icon div:nth-of-type(4) {
+    bottom: 28%;
+}
+
+/* Changed by JS */
+/* Nav Icon Open*/
+#main-nav.open #nav-icon div:nth-of-type(1),
+#main-nav.open #nav-icon div:nth-of-type(4) {
+    opacity: 0;
+    width: 0%;
+}
+
+#main-nav.open #nav-icon div:nth-of-type(1) {
+    top: calc(50% - 1.5px);
+}
+
+#main-nav.open #nav-icon div:nth-of-type(4) {
+    bottom: calc(50% - 1.5px);
+}
+
+#main-nav.open #nav-icon div:nth-of-type(2) {
+    transform: rotate(45deg);
+}
+
+#main-nav.open #nav-icon div:nth-of-type(3) {
+    transform: rotate(-45deg);
+}
+
+#main-nav.open ul {
+    transform: none;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) {
+    :root {
+        --body-padding: 50px;
+    }
+
+    #nav-icon,
+    #nav-icon {
+        display: none;
+    }
+
+    #main-nav {
+        width: calc(100vw - var(--body-padding) * 2);
+        display: flex;
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+    #main-nav ul {
+        width: auto;
+        position: relative;
+        transform: translateY(0);
+        transition: transform .3s ease-in-out;
+        display: flex;
+        margin-left: auto;
+    }
+
+    #main-nav ul li a {
+        position: relative;
+    }
+
+    #main-nav li:not(li:last-of-type) {
+        border-right: 2px solid #FFF;
+        margin-bottom: -30px;
+    }
+
+    #main-nav a {
+        border: 0;
+        padding: 5px 15px 10px;
+        font-weight: var(--weight-light);
+    }
+
+    #main-nav > a {
+        z-index: 0;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    #main-nav li:last-of-type a {
+        border-bottom: 0;
+    }
+
+    #portrait-container {
+        width: 60%;
+        margin-left: auto;
+        margin-right: calc(auto - 50px);
+    }
+
+    #arrow {
+        position: absolute;
+        top: auto;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* Laptops */
+@media only screen and (min-width: 1024px) {
+    #home header {
+        display: flex;
+        align-content: space-around;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    #home header > div:nth-of-type(1) {
+        padding: 0;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    #main-nav {
+        position: relative;
+    }
+
+    #main-nav a:before {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        left: 15px;
+        height: 2px;
+        width: calc(100% - 30px);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.4s ease-in-out;
+        background-color: #FFF;
+    }
+
+    #main-nav a:hover:before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    #home header > div:nth-of-type(1) {
+        width: 50%;
+        background-color: var(--bg-color);
+    }
+
+    #portrait-container {
+        width: 40%;
+    }
+
+    #portrait-container img {
+        width: clamp(15em, 90%, 30em);
+    }
+
+    #arrow {
+        bottom: 0;
+    }
+}

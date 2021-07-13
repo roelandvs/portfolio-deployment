@@ -1,0 +1,116 @@
+:root {
+    /* for JS changes */
+    --project-opacity: 1;
+    --pos-Y: 0;
+}
+
+#projects li {
+    border: 2px solid #FFF;
+    margin-bottom: 25px;
+    opacity: var(--project-opacity);
+    overflow: hidden;
+}
+
+#projects li img {
+    width: 100%;
+    margin-bottom: -5px;
+    transition: 0.3s ease-in;
+}
+
+#projects li div {
+    border-top: 2px solid #FFF;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#projects li p {
+    font-size: 1.3em;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+}
+
+#projects li:nth-of-type(even) {
+    --startPos-X: 50vw;
+}
+
+#projects li:nth-of-type(odd) {
+    --startPos-X: -50vw;
+}
+
+#projects .trophy-icon {
+    width: 1em;
+    margin-left: 1em;
+    transform: scale(1.1);
+}
+
+@keyframes animIn {
+    from {
+        transform: translate(var(--startPos-X), var(--pos-Y));
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, var(--pos-Y));
+        opacity: 1;
+    }
+}
+
+@media only screen and (min-width: 728px) {
+    #projects li:nth-of-type(even) {
+        --pos-Y: 30%;
+    }
+    
+    #projects li:nth-of-type(odd) {
+        --pos-Y: 0;
+    }
+
+    #projects {
+        display: flex;
+        padding: 0 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #projects li {
+        width: calc(50% - 12.5px);
+    }
+
+    #projects li:hover a > img {
+        transform: scale(1.07);
+    }
+}
+
+/* Laptop */
+@media only screen and (min-width: 1024px) {
+    #projects li {
+        border: 2px solid #FFF;
+        margin-bottom: 25px;
+    }
+
+    #projects li p:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.4s ease-in-out;
+        background-color: #FFF;
+    }
+
+    #projects li:hover p:after {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+}
+
+/* Laptop L*/
+@media only screen and (min-width: 1440px) {
+}
+
+/* Laptop 4K*/
+@media only screen and (min-width: 2550px) {
+}

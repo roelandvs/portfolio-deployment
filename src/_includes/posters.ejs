@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body id="detail">
+    <%- include('./partials/navigation') %>
+    <div id="line"></div>
+    
+    <header>
+        <h1 data-content="Posters">Posters</h1>
+    </header>
+
+    <main>
+        <section class="poster-container">
+            <h2 data-content="2020">2020</h2>
+            <ul>
+                <li><img src="/img/posters/porsche.jpg" alt=""></li>
+                <li><img src="/img/posters/t3.jpg" alt=""></li>
+            </ul>
+        </section>
+
+        <section class="poster-container">
+            <h2 data-content="2019">2019</h2>
+            <ul>
+                <li><img src="/img/posters/ganesha.jpg" alt=""></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section class="poster-container">
+            <h2 data-content="2018">2018</h2>
+            <ul>
+                <li><img src="/img/posters/mac.jpg" alt=""></li>
+                <li><img src="/img/posters/paak.jpg" alt=""></li>
+                <li><img src="/img/posters/biggie.jpg" alt=""></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+    <script src="/js/bundle.min.js"></script>
+</body>
+
+</html>

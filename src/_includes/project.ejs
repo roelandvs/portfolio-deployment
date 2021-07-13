@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <link rel="preload" as="image" href="./img/headers/<%= img %>">
+</head>
+
+<body id="detail">
+    <%- include('./partials/navigation') %>
+    <div id="line"></div>
+    
+    <header>
+        <h1 data-content="<%= title %>"><%= title %></h1>
+        <% if (typeof price !== 'undefined') { %>
+            <div class="trophy">
+                <img src="/img/trophy.svg" alt="trophy icon">
+                <p>Winner <%= price %></p>
+            </div>
+        <% } %>
+    </header>
+
+    <main>
+        <img class="header-img" src="/img/headers/<%= img %>" alt="<%= title %>">
+
+        <div class="project-info">
+            <section>
+                <h2 data-content="This Project" id="info-title">This Project</h2>
+                <% projectInfo.forEach(paragraph => { %>
+                    <p><%= paragraph %></p>
+                <% }) %>
+            </section>
+
+            <section>
+                <h2>Used Tech</h2>
+                <ul>
+                    <% usedTech.forEach(item => { %>
+                        <li><%= item %></li>
+                    <% }) %>
+                </ul>
+            </section>
+        </div>
+
+        <div class="project-links">
+            <a href="<%= liveLink %>" rel="noreferrer noopener" target="_blank">Live Preview</a>
+            <a href="<%= github %>" rel="noreferrer noopener" target="_blank">Github page</a>
+        </div> 
+    </main>
+
+    <footer>
+        <%- include('./partials/footer') %>
+    </footer>
+    <script src="/js/bundle.min.js"></script>
+</body>
+
+</html>

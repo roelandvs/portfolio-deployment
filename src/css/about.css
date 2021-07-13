@@ -1,0 +1,42 @@
+#about h1 {
+}
+
+#about h1::after {
+    width: calc(100% + 30px);
+}
+
+#about h1 span {
+    display: block;
+}
+
+#about header {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px auto 30px;
+    /* text-align: center; */
+}
+
+#about img {
+    width: 100%;
+}
+
+/* Tablets */
+@media only screen and (min-width: 728px) {
+    #about header {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #about h1 {
+        /* margin: 0 auto; */
+    }
+
+    #about header img {
+        width: calc(50% - 1em);
+    }
+
+    #about .project-info section:nth-of-type(1),
+    #about .project-info section:nth-of-type(2) {
+        width: 50%;
+    }
+}
