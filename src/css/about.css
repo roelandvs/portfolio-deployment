@@ -10,7 +10,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 50px auto 30px;
-    /* text-align: center; */
 }
 
 #about img {
@@ -22,10 +21,6 @@
     #about header {
         justify-content: space-between;
         align-items: center;
-    }
-
-    #about h1 {
-        /* margin: 0 auto; */
     }
 
     #about header img {
