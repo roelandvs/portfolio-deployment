@@ -5,11 +5,13 @@
     --margin-mid: 50px;
     --weight-light: 300;
 
-    /* JS changed properties */
-    --nav-pos: relative;
-    --ul-pos: relative;
+    /* JS changed properties id css menu works without js */
+    /* --ul-pos: relative;
     --ul-transform: none;
-    --icon-display: none;
+    --icon-display: none; */
+    --ul-pos: absolute;
+    --ul-transform: translateY(-150px);
+    --icon-display: flex;
 }
 
 /* Navigation */
