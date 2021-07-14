@@ -22,10 +22,11 @@
     display: flex;
     align-items: center;
     height: auto;
+    padding-bottom: 1em;
 }
 
 #detail .trophy img {
-    width: 2.5em;
+    width: 3.3em;
     margin-right: 1.5em;
 }
 
@@ -135,6 +136,7 @@
 
     #detail .trophy {
         margin: 0 auto;
+        padding: 0;
     }
 
     #detail .trophy img {
@@ -180,5 +182,10 @@
 
     #detail .poster-container h2 {
         font-size: 3em;
+    }
+
+    #detail .trophy img {
+        width: 3.9em;
+        margin-right: 1.5em;
     }
 }
