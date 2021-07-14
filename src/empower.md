@@ -2,8 +2,7 @@
 title: 'Empower'
 img: 'empower-header.png'
 projectInfo: [
-    'The assignment of this project was to design and create a menu with pure CSS and HTML. The goal of this assignment was to experiment with CSS and learn new CSS techniques. I focussed on 3D transforms to create a menu that looked like a physical menu. You can click on each page to browse through the menu.',
-    'The assignment also contained a few restrictions: You could not use any id’s or classes, You could only use 2 colors and You must make it printable (@media print)'
+    'The focus of the application is helping prosumers in their effort to make a green energy community. Our goal is to to create inspirational examples of features for the digital platform EMPOWER 2.0 by exploring visualization possibilities using data from Dutch open sources and combining three different types of information: the number of initiatives in a place and its characteristics, the renewable energy production of different areas in the Netherlands and, mainly, the capacity of production of each area.'
 ]
 usedTech: [
     'HTML',
