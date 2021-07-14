@@ -1,6 +1,6 @@
 ---
 title: 'Poker app'
-img: 'poker-screen.png'
+img: 'poker-header.png'
 projectInfo: [
     'This application uses real-time data to create a multi-user poker game. You can make or join a room to play against other people',
     'The point of creating this game was to learn and experiment with webSockets and creating a multi-user experience.',
