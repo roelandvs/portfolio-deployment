@@ -1,7 +1,8 @@
 // 11ty configuration
 module.exports = config => {
-    // add images to build/
+    // add folders to build/
     config.addPassthroughCopy('src/img');
+    config.addWatchTarget('./src/js/');
 
     // 11ty defaults
     return {

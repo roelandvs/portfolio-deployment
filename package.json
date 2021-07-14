@@ -5,11 +5,9 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "eleventy && npm run build:css && npm run build:js",
+    "build": "eleventy && npm run build:css",
     "prebuild:css": "rimraf \"public/css\"",
-    "build:css": "node ./scripts/build-css.js",
-    "prebuild:js": "rimraf \"public/js\"",
-    "build:js": "node ./scripts/build-js.js"
+    "build:css": "node ./scripts/build-css.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +18,9 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
-    "rimraf": "^2.7.1"
+    "rimraf": "^2.7.1",
+    "rollup": "^2.53.1",
+    "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
     "ejs": "^2.7.4"

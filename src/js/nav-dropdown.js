@@ -1,6 +1,7 @@
 const nav = document.querySelector('#main-nav');
 const navIcon = document.querySelector('#nav-icon');
 const navLinks = document.querySelector('#main-nav ul');
+const root = document.documentElement;
 
 root.style.setProperty('--nav-pos', 'sticky');
 root.style.setProperty('--ul-pos', 'absolute');
